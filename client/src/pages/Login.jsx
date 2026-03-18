@@ -27,7 +27,7 @@ export default function Login() {
 
         <input
           placeholder="Email"
-          className="input"
+          className="w-full border p-2 rounded mb-3"
           onChange={(e) =>
             setForm({ ...form, email: e.target.value })
           }
@@ -36,7 +36,7 @@ export default function Login() {
         <input
           type="password"
           placeholder="Password"
-          className="input"
+          className="w-full border p-2 rounded mb-3"
           onChange={(e) =>
             setForm({ ...form, password: e.target.value })
           }
