@@ -38,16 +38,16 @@ export default function Home() {
   );
 
   return (
-    <div className="relative">
+    <div className="relative mx-5 mt-4">
       <input
         type="text"
         placeholder="Search by name or location..."
-        className="border p-2 rounded mb-4 w-full"
+        className="bg-[#C5D5E2] p-3 rounded-full mb-4 w-full"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <div className="p-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {loading
           ? Array(6)
               .fill()
@@ -75,7 +75,7 @@ export default function Home() {
             <button
               key={i}
               onClick={() => setCurrentPage(i + 1)}
-              className={`px-3 py-1 rounded ${
+              className={`px-3 py-1 rounded-full hover:cursor-pointer ${
                 currentPage === i + 1
                   ? "bg-blue-600 text-white"
                   : "bg-gray-200"

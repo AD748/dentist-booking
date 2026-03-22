@@ -1,11 +1,11 @@
 export default function DentistCard({ dentist, onBook }) {
   return (
-    <div className="bg-white shadow-xl rounded-xl p-4 text-[12px] lg:text-[16px] flex justify-between lg:items-end flex-col  lg:flex-row gap-4">
+    <div className="bg-[#C5D5E2] rounded-xl p-4 text-[12px] lg:text-[16px] flex justify-between lg:items-end flex-col  lg:flex-row gap-4 tracking-widest transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
       <div className="flex flex-col items-start justify-between">
         <img
           src={dentist.image}
           alt="dentist"
-          className="w-60 h-auto object-cover object-top rounded-lg border"
+          className="w-70 h-70 lg:w-60 object-cover object-top rounded-lg"
         />
         
       </div>
@@ -20,7 +20,7 @@ export default function DentistCard({ dentist, onBook }) {
       <p className="text-gray-500">{dentist.address}</p>
       <button
           onClick={() => onBook(dentist)}
-          className="mt-3 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:cursor-pointer transition duration-75"
+          className="mt-3 bg-blue-700 text-white px-4 py-2 rounded-full hover:bg-blue-600 hover:cursor-pointer transition duration-75"
         >
           Book Appointment
         </button>

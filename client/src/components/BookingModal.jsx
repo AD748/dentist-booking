@@ -66,15 +66,15 @@ export default function BookingModal({ dentist, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 backdrop-blur-lg flex justify-center items-center">
-      <div className="bg-white p-6 rounded-xl w-[80vw] md:w-96 border shadow-lg">
+    <div className="fixed inset-0 backdrop-blur-lg flex justify-center items-center tracking-widest">
+      <div className="bg-white p-6 rounded-xl w-[80vw] md:w-96 shadow-lg">
         <h2 className="text-xl font-bold mb-4">
           Book appointment with {dentist.name}
         </h2>
 
         <input
           placeholder="Name"
-          className="w-full border p-2 rounded mb-3"
+          className="w-full border p-2 rounded-full mb-3"
           onChange={(e) =>
             setForm({ ...form, patientName: e.target.value })
           }
@@ -83,7 +83,7 @@ export default function BookingModal({ dentist, onClose }) {
         <input
           type="number"
           placeholder="Age"
-          className="w-full border p-2 rounded mb-3"
+          className="w-full border p-2 rounded-full mb-3"
           onChange={(e) =>
             setForm({ ...form, age: e.target.value })
           }
@@ -91,7 +91,7 @@ export default function BookingModal({ dentist, onClose }) {
 
         <select
           value={form.gender}
-          className="w-full border p-2 rounded mb-3"
+          className="w-full border py-2 px-3 rounded-full mb-3"
           onChange={(e) =>
             setForm({ ...form, gender: e.target.value })
           }
@@ -107,20 +107,20 @@ export default function BookingModal({ dentist, onClose }) {
         <input
         value={form.appointmentDate}
           type="date"
-          className="w-full border p-2 rounded mb-3"
+          className="w-full border p-2 rounded-full mb-3"
           onChange={(e) =>
             setForm({ ...form, appointmentDate: e.target.value })
           }
         />
 
         <div className="flex justify-between mt-4">
-          <button className="bg-red-500 text-white px-4 py-2 rounded hover:cursor-pointer" onClick={onClose}>
+          <button className="bg-red-500 text-white px-4 py-2 rounded-full hover:cursor-pointer" onClick={onClose}>
             Cancel
           </button>
 
           <button
             onClick={handleSubmit}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:cursor-pointer disabled:bg-blue-300"
+            className="bg-blue-600 text-white px-4 py-2 rounded-full hover:cursor-pointer disabled:bg-blue-300"
             disabled={loading}
           >
             {loading ? "Booking..." : "Confirm"}

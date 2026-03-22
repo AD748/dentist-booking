@@ -6,7 +6,7 @@ export const getDentists = async () => {
 };
 
 export const createAppointment = async (data) => {
-  const res = await fetch(`${BASE_URL}/appointments`, {
+  const res = await fetch(`${BASE_URL}/api/appointments`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

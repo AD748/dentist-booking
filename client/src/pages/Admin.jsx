@@ -25,7 +25,7 @@ export default function Admin() {
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="p-6 tracking-widest">
       <h1 className="text-2xl font-bold mb-4">Appointments</h1>
 
       {loading ? (
